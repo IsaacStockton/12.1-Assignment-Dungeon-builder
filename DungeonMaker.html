@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dungeon Buidler</title>
+    <link rel="stylesheet" href="mainDungeon.css">
+
+</head>
+<body>
+    <header>
+        <h1>Create A Dungeon Floor</h1>
+        <p>Here you can create A dungeon floor</p>
+    </header>
+    <main>
+        <!-- This section will contain everthing for the page -->
+        <section class="dungeonSection">
+            <form id = "dungeonForm">
+                <!-- This section is for the user to put in a name of their dungeon floor -->
+                 <div class = "formGroup">
+                    <label for="txtDungeonName">Dungeon Name</label>
+                    <!-- This allow the users to input the name into the box -->
+                     <input type="text" id="txtDungeonName" placeholder="Enter a Dungeon Name">
+
+                 </div>
+
+                 <!-- This section is where users can select the different types of dungeon floors -->
+                  <div class="formGroup">
+                    <label for="ddlType">Dungeon Type</label>
+
+                    <!-- This is where the drop menu information for the different type of dungeon floors -->
+                     <select id="ddlType">
+                        <option value="Caves">Caves</option>
+                        <option value="Mines">Mines</option>
+                        <option value="Crypts">Crypts</option>
+                        <option value="Ruins">Ruins</option>
+                        <option value="Labyrinth">Labyrinth</option>
+                        <option value="City">City</option>
+                        <option value="SpiderForest">Spider Forest</option>
+                        <option value="GlowingLakes">Glowing Lakes</option>
+                        <option value="DwarvenHalls">Dwarven Halls</option>
+                     </select>
+                  </div>
+
+                  <!-- This section is where the useres can select the type of biome the floor will be. -->
+                   <div class="formGroup">
+                    <label for="ddlBiome">Biomes</label>
+                    <select id="ddlBiome">
+                        <option value="Slime">Slime</option>
+                        <option value="Frozen">Frozen</option>
+                        <option value="Volcanic">Volcanic</option>
+                        <option value="Desert">Desert</option>
+                        <option value="Swamp">Swamp</option>
+                        <option value="Forest">Forest</option>
+                        <option value="Dark Depths">Dark Depths</option>
+                        <option value="Flooded">Flooded</option>
+                    </select>
+                   </div>
+
+                   <!-- This section is for the choosing of the difficulty of the floor -->
+                    <div class="formGroup">
+                        <label for="ddlDifficulty">difficulty</label>
+                        <select id="ddlDifficulty">
+                        <option value="Easy">Easy</option>
+                        <option value="Medium">Medium</option>
+                        <option value="Hard">Hard</option>
+                        <option value="Nightmare">Nightmare</option>
+                        </select>
+                    </div>
+
+                    <!-- This section is for the different traps that players can run into -->
+                     <div class="formGroup">
+                        <label for="ddlTrap">Trap Types</label>
+                        <select id="ddlTrap">
+                            <option value="Spikes">Spikes</option>
+                            <option value="Poison Gas">Poison Gas</option>
+                            <option value="Arrow Walls">Arrow Walls</option>
+                            <option value="Pitfalls">Pitfalls</option>
+                            <option value="Magic Runes">Magic Runes</option>
+                            <option value="Collapsing Ceilings">Collapsing Ceilings</option>
+                        </select>
+
+                     </div>
+
+                    <!-- This section will allow users to deside the type of loot that will spawn in this floor -->
+                     <div class="formGroup">
+                        <label for="ddlLootType">Loot Type</label>
+                        <select id="ddlLootType">
+                            <option value="WeaponsGrimoires">Weapons & Grimoires</option>
+                            <option value="ArmorsShields">Armor & Shields</option>
+                            <option value="PotionsScrolls">Potions & Scrolls</option>
+                            <option value="ArtifactsLore">Artifacts & Lore</option>
+                            <option value="TresuresCraftingmaterials">Treasures & Crafting Materials</option>
+                            <option value="OresGems">Ores & Gems</option>
+                        </select>
+                     </div>
+                     <!-- This section is for user to choose the rarity of the loot that spawns -->
+                      <div class="formGroup">
+                        <label for="ddlLootRarity">Loot Rarity</label>
+                        <Select id="ddlLootRarity">
+                            <option value="Common">Common</option>
+                            <option value="Rare">Rare</option>
+                            <option value="Epic">Epic</option>
+                            <option value="Legendary">Legendary</option>
+                        </Select>
+                      </div>
+
+                      <!-- This section will dictate the amount of monsters can spawn inside that floor -->
+                       <div class="formGroup">
+                        <label for="numMonsters">Number of Monsters</label>
+                        <input type="number" id="numMonsters" min="3" max="15" value="5">
+                       </div>
+
+                       <!-- This section will amount of items/loot that spawns -->
+                        <div class="formGroup">
+                            <label for="numItems">Number of Items</label>
+                            <input type="number" id="numItems" min="1" max="10" value="2">
+                        </div>
+                        <!-- This is the button to submit the form after selecting the different category  -->
+                         <input type="submit" value="Build Dungeon" class="mainButton">
+            </form>
+        </section>
+
+        <!-- This section will show a message that will show the results of the users selection -->
+         <section class="resultSection">
+            <div id="divMessage">Fill out the form and build your dungeon floors</div>
+
+            <!-- This message is the final dungeon summary -->
+             <div id="divDungeonOutPut"></div>
+
+             <!-- This div will show the different monsters that will spawn in that floor -->
+              <div id="divMonsterList"></div>
+
+              <!-- This div will show the different types of items that can be found on that floor -->
+               <div id="divItemList"></div>
+         </section>
+    </main>
+
+    <script src="ScriptDungeon.js"></script>
+</body>
+</html>
